@@ -2,9 +2,8 @@ import os
 import anyio
 import uvicorn
 
-from mcp.server.mcpserver import MCPServer
+from mcp.server.fastmcp import FastMCP as MCPServer
 from database import get_connection
-mcp = MCPServer("Gaming Store")
 
 from mcp.server.transport_security import TransportSecuritySettings
 from starlette.responses import PlainTextResponse
@@ -33,6 +32,14 @@ if codespace_name:
 security = TransportSecuritySettings(
     allowed_hosts=allowed_hosts,
     allowed_origins=allowed_origins,
+)
+
+mcp = MCPServer(
+    "Gaming Store",
+    host=os.getenv("HOST", "0.0.0.0"),
+    port=PORT,
+    streamable_http_path="/mcp",
+    transport_security=security,
 )
 
 @mcp.tool()
@@ -246,11 +253,7 @@ def create_order(
 
 
 async def run_http_server():
-    app = mcp.streamable_http_app(
-        streamable_http_path="/mcp",
-        transport_security=security,
-        host=os.getenv("HOST", "0.0.0.0"),
-    )
+    app = mcp.streamable_http_app()
 
     async def homepage(request):
         return PlainTextResponse("Gaming Store MCP server is running. MCP endpoint: /mcp")

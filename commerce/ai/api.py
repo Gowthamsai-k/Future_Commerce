@@ -13,7 +13,7 @@ from commerce.config import AI_API_HOST, AI_API_PORT, AUDIT_FILE
 
 async def buyer(request: Request):
     payload = await request.json()
-    required = ["product_request", "budget", "customer_name", "customer_email", "shipping_address"]
+    required = ["product_request", "budget"]
     missing = [field for field in required if not payload.get(field)]
     if missing:
         return JSONResponse({"error": f"Missing required fields: {', '.join(missing)}"}, status_code=400)
@@ -29,13 +29,17 @@ async def buyer(request: Request):
         async def run():
             try:
                 result = await run_buyer(
-                    **{key: payload[key] for key in ["product_request", "budget", "customer_name", "customer_email", "shipping_address"]},
+                    product_request=payload.get("product_request", ""),
+                    budget=payload.get("budget", 0),
+                    customer_name=payload.get("customer_name") or "AI Buyer",
+                    customer_email=payload.get("customer_email") or "ai-buyer@example.com",
+                    shipping_address=payload.get("shipping_address") or "Not provided",
                     quantity=payload.get("quantity", 1),
                     payment_method=payload.get("payment_method", "card"),
                     audit=audit,
                     audit_callback=publish,
                 )
-                return {"message": result["message"]}
+                return {"message": result["message"], "summary": result.get("summary", {})}
             except Exception as error:
                 return {"error": str(error)}
             finally:

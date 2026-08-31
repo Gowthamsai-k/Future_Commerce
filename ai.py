@@ -1,94 +1,25 @@
+"""Compatibility launcher and exports for the structured AI buyer."""
+
 import asyncio
 import os
 
-from langchain_mcp_adapters.client import MultiServerMCPClient
-from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
-from langchain.agents import create_agent
+from commerce.ai.buyer import BuyerProtocolError, run_buyer
 
-
-MCP_URL = os.getenv("MCP_URL", "http://127.0.0.1:8000/mcp")
-HF_MODEL = os.getenv("HF_MODEL", "Qwen/Qwen2.5-72B-Instruct")
-HF_TOKEN = os.getenv("HF_TOKEN")
+__all__ = ["BuyerProtocolError", "run_buyer"]
 
 
 async def main():
-
-    # -------------------------
-    # 1. Connect to MCP
-    # -------------------------
-
-    client = MultiServerMCPClient(
-        {
-            "gaming_store": {
-                "transport": "streamable_http",
-                "url": MCP_URL,
-            }
-        }
+    result = await run_buyer(
+        product_request=os.getenv("PRODUCT_REQUEST", "gaming mouse"),
+        budget=float(os.getenv("BUYER_BUDGET", "2000")),
+        customer_name=os.getenv("CUSTOMER_NAME", "AI Buyer"),
+        customer_email=os.getenv("CUSTOMER_EMAIL", "ai-buyer@example.com"),
+        shipping_address=os.getenv("SHIPPING_ADDRESS", "Not provided"),
+        quantity=int(os.getenv("PRODUCT_QUANTITY", "1")),
+        payment_method=os.getenv("PAYMENT_METHOD", "card"),
     )
-
-    # -------------------------
-    # 2. Discover MCP tools
-    # -------------------------
-
-    tools = await client.get_tools()
-
-    print("MCP tools:")
-
-    for tool in tools:
-        print("-", tool.name)
-
-    # -------------------------
-    # 3. Create LLM
-    # -------------------------
-
-    if not HF_TOKEN:
-        raise RuntimeError("HF_TOKEN is required. Set it before running ai.py.")
-
-    endpoint = HuggingFaceEndpoint(
-        repo_id=HF_MODEL,
-        task="text-generation",
-        huggingfacehub_api_token=HF_TOKEN,
-        max_new_tokens=512,
-        temperature=0,
-    )
-    model = ChatHuggingFace(llm=endpoint)
-
-    # -------------------------
-    # 4. Create agent
-    # -------------------------
-
-    agent = create_agent(
-        model,
-        tools
-    )
-
-    # -------------------------
-    # 5. Ask the agent
-    # -------------------------
-
-    response = await agent.ainvoke(
-        {
-            "messages": [
-                {
-                    "role": "user",
-                    "content": (
-                        "Find me a gaming mouse "
-                        "under ₹2000."
-                    )
-                }
-            ]
-        }
-    )
-
-    # -------------------------
-    # 6. Print final response
-    # -------------------------
-
     print("\nFINAL RESPONSE:\n")
-
-    print(
-        response["messages"][-1].content
-    )
+    print(result["message"])
 
 
 if __name__ == "__main__":

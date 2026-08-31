@@ -1,0 +1,1 @@
+"""Store domain operations exposed to MCP clients."""

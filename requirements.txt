@@ -1,0 +1,7 @@
+mcp<2
+starlette
+uvicorn
+python-dotenv
+langchain
+langchain-mcp-adapters
+langchain-groq

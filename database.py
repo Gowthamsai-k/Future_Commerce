@@ -1,37 +1,10 @@
-import sqlite3
+"""Compatibility exports for database helpers."""
 
-DB_NAME = "gaming_store.db"
+from commerce.config import DB_NAME
+from commerce.db.connection import get_connection
+from commerce.db.schema import initialize_database
 
-def get_connection():
-    conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row
-    return conn
+# Preserve the original public name used by existing scripts.
+initilize_database = initialize_database
 
-
-def initilize_database():
-    conn = get_connection()
-    conn.execute("""CREATE TABLE IF NOT EXISTS products (
-    id Integer Primary Key AUTOINCREMENT , 
-    name Text Not Null , 
-    price real not null , 
-    description real not null , 
-    category real not null, 
-    brand text , 
-    stock Integer not null default 0
-    )""")
-
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS orders (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            product_id INTEGER NOT NULL,
-            quantity INTEGER NOT NULL,
-            total REAL NOT NULL,
-            status TEXT NOT NULL,
-            FOREIGN KEY(product_id)
-                REFERENCES products(id)
-        )
-    """)
-    conn.commit()
-    conn.close()
-
-initilize_database()
+__all__ = ["DB_NAME", "get_connection", "initialize_database", "initilize_database"]

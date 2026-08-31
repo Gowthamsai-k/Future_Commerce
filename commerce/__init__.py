@@ -1,0 +1,1 @@
+"""Future Commerce application package."""

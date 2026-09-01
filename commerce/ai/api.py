@@ -12,11 +12,16 @@ from commerce.config import AI_API_HOST, AI_API_PORT, AUDIT_FILE
 
 
 async def buyer(request: Request):
-    payload = await request.json()
-    required = ["product_request", "budget"]
-    missing = [field for field in required if not payload.get(field)]
-    if missing:
-        return JSONResponse({"error": f"Missing required fields: {', '.join(missing)}"}, status_code=400)
+    try:
+        payload = await request.json()
+    except Exception:
+        return JSONResponse({"error": "Request body must be valid JSON"}, status_code=400)
+
+    if not isinstance(payload, dict):
+        return JSONResponse({"error": "Request body must be a JSON object"}, status_code=400)
+
+    if not payload.get("product_request"):
+        return JSONResponse({"error": "Missing required field: product_request"}, status_code=400)
 
     async def stream():
         audit = []
@@ -29,13 +34,14 @@ async def buyer(request: Request):
         async def run():
             try:
                 result = await run_buyer(
-                    product_request=payload.get("product_request", ""),
-                    budget=payload.get("budget", 0),
-                    customer_name=payload.get("customer_name") or "AI Buyer",
-                    customer_email=payload.get("customer_email") or "ai-buyer@example.com",
-                    shipping_address=payload.get("shipping_address") or "Not provided",
-                    quantity=payload.get("quantity", 1),
-                    payment_method=payload.get("payment_method", "card"),
+                    product_request=payload.get("product_request"),
+                    budget=payload.get("budget"),
+                    customer_name=payload.get("customer_name"),
+                    customer_email=payload.get("customer_email"),
+                    shipping_address=payload.get("shipping_address"),
+                    quantity=payload.get("quantity"),
+                    payment_method=payload.get("payment_method") or "razorpay",
+                    conversation_history=payload.get("conversation_history", []),
                     audit=audit,
                     audit_callback=publish,
                 )

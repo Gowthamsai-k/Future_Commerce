@@ -121,3 +121,119 @@
 {"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-08-31T11:03:00.183638+00:00", "tool_count": 14}
 {"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-08-31T11:03:00.289923+00:00"}
 {"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-08-31T11:03:01.689750+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:00:01.093587+00:00", "request": "can you list me the available products", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:00:01.193403+00:00", "tool_count": 14}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:01:41.311703+00:00", "request": "can you list me the available products", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:01:41.366253+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:01:41.629148+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:01:43.206412+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:05:37.184757+00:00", "request": "can you list me all the products", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:05:37.227391+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:05:37.299693+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:05:38.699632+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:05:51.518668+00:00", "request": "buy me the xbox controller", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:05:51.563930+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:05:51.631157+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:05:56.102733+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:06:29.319603+00:00", "request": "qty =  1 , gowtham vithal sai , gowhtamsai0519@gmail.com  , mig chtrapuri colony , card", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:06:29.366438+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:06:29.431597+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:06:30.206854+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:06:41.868990+00:00", "request": "xbox controller", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:06:41.911687+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:06:41.985024+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:06:43.777963+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:06:59.904346+00:00", "request": "get me the controller", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:06:59.947639+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:07:00.012764+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:07:00.692741+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:15:37.394074+00:00", "request": "can you write me a c code for printinh hello world", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:15:37.438580+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:15:37.521688+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:15:38.298912+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:16:07.021879+00:00", "request": "can you get me headphones under 5000", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:16:07.064394+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:16:07.130624+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:16:08.815468+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:16:27.755072+00:00", "request": "just look for headphone s with slight increase in budget", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:16:27.799403+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:16:27.863862+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:16:28.442384+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:16:36.670256+00:00", "request": "10k", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:16:36.713661+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:16:36.814241+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:16:37.533579+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:16:48.053572+00:00", "request": "headphones under 10k", "budget": null, "quantity": null}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:27:47.559422+00:00", "request": "hey", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:27:47.650996+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:27:47.867338+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:27:48.483029+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:28:02.724350+00:00", "request": "can you show me the console accessories", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:28:02.766228+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:28:02.840614+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:28:05.309349+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:28:17.381992+00:00", "request": "headphones , show me all you got", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:28:17.430785+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:28:17.496150+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:28:45.439309+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:28:57.080459+00:00", "request": "show me all the products you have", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:28:57.131438+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:28:57.197439+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:29:21.709254+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:29:39.331584+00:00", "request": "buy me a headset", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:29:39.386944+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:29:39.458646+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:29:42.485969+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:30:02.439909+00:00", "request": "Gowhtam sai , gowthamsai0519@gmail.com", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:30:02.481866+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:30:02.615065+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:30:26.855606+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:30:37.067322+00:00", "request": "1", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:30:37.116252+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:30:37.181268+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:31:06.937636+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:31:26.482338+00:00", "request": "just buy me the hyper X ill give you the budget", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:31:26.535575+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:31:26.608972+00:00"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-01T06:32:11.028408+00:00", "product_id": 4, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-01T06:32:11.079726+00:00", "total": 3499.0, "running_total": 3499.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:32:34.910493+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:32:57.263852+00:00", "request": "can you list my order s", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:32:57.315657+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:32:57.427547+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:33:20.390998+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:37:18.644431+00:00", "request": "heyy , write me a python code", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:37:18.712490+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:37:18.919136+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:37:19.598931+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:38:54.197813+00:00", "request": "hey can you write some python code", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:38:54.248408+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:38:54.323388+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:38:55.435549+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:39:07.233924+00:00", "request": "can you buy me a headset under 4k", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:39:07.274766+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:39:07.339158+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:39:08.108111+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:44:15.568479+00:00", "request": "can you buy me a headset under 4k", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:44:15.631500+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:44:15.701049+00:00"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-01T06:44:17.243150+00:00", "product_id": 4, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-01T06:44:17.291402+00:00", "total": 3499.0, "running_total": 3499.0}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-01T06:44:25.103927+00:00", "order_id": 3, "attempt": 1}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:44:37.822674+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:44:54.237379+00:00", "request": "can you list me  my orders", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:44:54.278981+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:44:54.346687+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:45:15.319794+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:45:34.141095+00:00", "request": "can you list me the products you have", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:45:34.188210+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:45:34.262714+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:45:55.011946+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:50:23.092354+00:00", "request": "can i get a gaming monitor under 10k ?", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:50:23.141429+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:50:23.256140+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:50:24.553567+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-01T06:50:44.958814+00:00", "request": "i want a keyboard under 3k", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:50:45.001159+00:00", "tool_count": 14}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:50:45.100153+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:50:46.094366+00:00"}

@@ -680,3 +680,77 @@
 {"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:09:41.078402+00:00", "order_id": 28, "attempt": 2, "otp": "1111"}
 {"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:09:42.465058+00:00", "order_id": 28, "attempt": 3, "otp": "1111"}
 {"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:09:43.105566+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:22:44.751430+00:00", "request": "can you list all the products you have", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:22:44.799877+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:22:44.836472+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T11:22:45.477548+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: completed", "timestamp": "2026-09-03T11:22:45.542032+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:22:48.171755+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:22:57.412960+00:00", "request": "can you buy me a mouse under 2000", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:22:57.465402+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:22:57.607923+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:23:00.616718+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T11:23:00.702178+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T11:23:01.882347+00:00", "product_id": 1, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T11:23:01.934581+00:00", "total": 1299.0, "running_total": 1299.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:23:03.993823+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:23:06.643065+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:23:06.707382+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:23:06.758900+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:23:07.481937+00:00", "order_id": 30, "attempt": 1, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:23:08.933351+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:23:16.270570+00:00", "request": "can you list me my orders", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:23:16.325415+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:23:16.363985+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_orders(customer_email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:23:17.303804+00:00", "tool": "list_orders", "arguments": {"customer_email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "list_orders: completed successfully", "timestamp": "2026-09-03T11:23:17.365566+00:00", "tool": "list_orders"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:23:18.212873+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:23:33.076626+00:00", "request": "can you cancel order #30", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:23:33.137610+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:23:33.171177+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: cancel_order(order_id=30)", "timestamp": "2026-09-03T11:23:33.773848+00:00", "tool": "cancel_order", "arguments": {"order_id": 30}}
+{"event": "mcp_tool_result", "detail": "cancel_order: completed successfully", "timestamp": "2026-09-03T11:23:33.839824+00:00", "tool": "cancel_order"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:23:34.550928+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:23:48.902196+00:00", "request": "can you buy me a monitor under 20k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:23:48.955506+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:23:48.986621+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='monitor', max_price=20000.0)", "timestamp": "2026-09-03T11:23:49.684210+00:00", "tool": "search_product", "arguments": {"query": "monitor", "max_price": 20000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Acer Nitro 24 Gaming Monitor' ($11999.0)", "timestamp": "2026-09-03T11:23:49.740192+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:23:50.514707+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T11:23:50.641567+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T11:23:51.254064+00:00", "product_id": 8, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T11:23:51.323300+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:23:53.575046+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:23:56.044186+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:23:56.089948+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:23:56.123462+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:23:56.788343+00:00", "order_id": 31, "attempt": 1, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:23:58.196476+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:25:34.067335+00:00", "request": "can you show me the products u have", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:25:34.118283+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:25:34.155485+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T11:25:34.782317+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: completed", "timestamp": "2026-09-03T11:25:34.835458+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:25:37.600745+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:25:53.868792+00:00", "request": "buy me a laptop under 50k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:25:53.917494+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:25:53.952960+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='laptop', max_price=50000.0)", "timestamp": "2026-09-03T11:25:54.706492+00:00", "tool": "search_product", "arguments": {"query": "laptop", "max_price": 50000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Lenovo IdeaPad Gaming 3' ($46999.0)", "timestamp": "2026-09-03T11:25:54.768738+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:25:55.400915+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T11:25:55.473949+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T11:25:56.069696+00:00", "product_id": 27, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T11:25:56.117594+00:00", "total": 46999.0, "running_total": 46999.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:25:57.909360+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:26:44.041142+00:00", "request": "can you list me my order s", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:26:44.145313+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:26:44.206633+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_orders(customer_email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:26:44.880630+00:00", "tool": "list_orders", "arguments": {"customer_email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "list_orders: completed successfully", "timestamp": "2026-09-03T11:26:44.931583+00:00", "tool": "list_orders"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:26:46.473727+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:27:30.001365+00:00", "request": "cancel my latest order", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:27:30.055895+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:27:30.088875+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: cancel_order(order_id=32)", "timestamp": "2026-09-03T11:27:30.685668+00:00", "tool": "cancel_order", "arguments": {"order_id": 32}}
+{"event": "mcp_tool_result", "detail": "cancel_order: completed successfully", "timestamp": "2026-09-03T11:27:30.761973+00:00", "tool": "cancel_order"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:27:31.327711+00:00"}

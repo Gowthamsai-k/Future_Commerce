@@ -44,6 +44,8 @@ const parsePurchaseSummary = (data) => {
     order_id: summary.order_id ?? null,
     payment_status: summary.payment_status || '',
     status: summary.status || '',
+    razorpay_order_id: summary.razorpay_order_id || '',
+    razorpay_payment_id: summary.razorpay_payment_id || '',
   }
 }
 
@@ -56,10 +58,12 @@ const formatResultAsMarkdown = (summary) => {
     markdown = `**✅ ${summary.message}**\n\n`
     markdown += '| Field | Value |\n|-------|-------|\n'
     if (summary.product) markdown += `| Product | ${summary.product} |\n`
-    if (summary.total != null) markdown += `| Total | $${Number(summary.total).toFixed(2)} |\n`
+    if (summary.total != null) markdown += `| Total | ₹${Number(summary.total).toFixed(2)} |\n`
     if (summary.order_id) markdown += `| Order ID | #${summary.order_id} |\n`
     if (summary.payment_status) markdown += `| Payment Status | ${summary.payment_status} |\n`
     if (summary.status) markdown += `| Order Status | ${summary.status} |\n`
+    if (summary.razorpay_order_id) markdown += `| Razorpay Order ID | \`${summary.razorpay_order_id}\` |\n`
+    if (summary.razorpay_payment_id) markdown += `| Razorpay Payment ID | \`${summary.razorpay_payment_id}\` |\n`
   } else {
     markdown = '**Summary**'
   }
@@ -70,6 +74,31 @@ const formatResultAsMarkdown = (summary) => {
 const detectFollowUpQuestion = (text) => {
   const lower = text.toLowerCase()
   
+  // OTP Verification Prompt (Highest Priority)
+  if (lower.includes('otp') || lower.includes('one time password') || lower.includes('authorize payment') || lower.includes('provide your otp')) {
+    return {
+      type: 'otp_prompt',
+      buttons: ['1111', '1234', '111111', 'Cancel Order'],
+    }
+  }
+  
+  // Disambiguation / Choice between items (e.g. "Which headset would you like... ID 4 or ID 5")
+  if ((lower.includes('which') || lower.includes('choose') || lower.includes('select') || lower.includes('or')) && lower.includes('?')) {
+    const choices = []
+    if (lower.includes('hyperx') || text.includes('HyperX')) choices.push('HyperX Cloud Stinger 2')
+    if (lower.includes('logitech') || text.includes('Logitech')) choices.push('Logitech G435 Wireless')
+    if (lower.includes('razer') || text.includes('Razer')) choices.push('Razer DeathAdder Essential')
+    if (lower.includes('redragon') || text.includes('Redragon')) choices.push('Redragon K552')
+    if (choices.length >= 2) {
+      return {
+        type: 'choice',
+        buttons: choices,
+      }
+    }
+    // If it's a "Which" choice question, don't generate incorrect Yes/No buttons
+    return null
+  }
+
   // Asking about quantity to buy (highest priority - most common case)
   if ((lower.includes('how many') || lower.includes('quantity') || lower.includes('how much')) && 
       lower.includes('?')) {
@@ -80,8 +109,7 @@ const detectFollowUpQuestion = (text) => {
   }
   
   // Asking about proceeding/confirmation with product in budget (don't offer budget adjustment)
-  if ((lower.includes('proceed') || lower.includes('order') || lower.includes('checkout') || 
-       lower.includes('buy') || lower.includes('purchase')) && lower.includes('?')) {
+  if ((lower.includes('proceed') || lower.includes('checkout') || lower.includes('confirm') || lower.includes('buy this')) && lower.includes('?')) {
     return {
       type: 'yes_no',
       buttons: ['Yes, buy it', 'No, cancel'],
@@ -107,9 +135,8 @@ const detectFollowUpQuestion = (text) => {
     }
   }
   
-  // Generic yes/no for other questions
-  if (lower.includes('?') && (lower.includes('would you') || lower.includes('do you') || 
-      lower.includes('should') || lower.includes('like'))) {
+  // Generic yes/no ONLY for explicit confirmation questions
+  if (lower.includes('?') && (lower.includes('would you like to proceed') || lower.includes('would you like to buy') || lower.includes('shall i place'))) {
     return {
       type: 'yes_no',
       buttons: ['Yes', 'No'],
@@ -117,6 +144,41 @@ const detectFollowUpQuestion = (text) => {
   }
   
   return null
+}
+
+const getNaturalLoadingMessage = (text) => {
+  const lower = text.toLowerCase()
+  if (lower.includes('buy') || lower.includes('order') || lower.includes('checkout') || lower.includes('pay') || lower.includes('yes')) {
+    const purchasePhrases = [
+      'Processing your purchase request...',
+      'Checking inventory and setting up your order...',
+      'Preparing your order & payment details...',
+      'Reserving item and preparing checkout...',
+    ]
+    return purchasePhrases[Math.floor(Math.random() * purchasePhrases.length)]
+  }
+  if (lower.includes('list') || lower.includes('show') || lower.includes('catalog') || lower.includes('available')) {
+    const listPhrases = [
+      'Fetching available store catalog...',
+      'Checking current store inventory...',
+      'Gathering available products for you...',
+    ]
+    return listPhrases[Math.floor(Math.random() * listPhrases.length)]
+  }
+  if (lower.includes('search') || lower.includes('find') || lower.includes('look') || lower.includes('under') || lower.includes('budget')) {
+    const searchPhrases = [
+      'Searching products within your budget...',
+      'Looking for matching items in stock...',
+      'Finding the best options for you...',
+    ]
+    return searchPhrases[Math.floor(Math.random() * searchPhrases.length)]
+  }
+  const defaultPhrases = [
+    'Checking with the store assistant...',
+    'Looking into that for you...',
+    'Consulting the store inventory...',
+  ]
+  return defaultPhrases[Math.floor(Math.random() * defaultPhrases.length)]
 }
 
 function App() {
@@ -128,6 +190,7 @@ function App() {
   const [audit, setAudit] = useState([])
   const [pipelineType, setPipelineType] = useState('purchase')
   const conversationRef = useRef(null)
+  const auditListRef = useRef(null)
   const isAtBottomRef = useRef(true)
   const [userDetails, setUserDetails] = useState({
     name: localStorage.getItem('user_name') || 'Guest',
@@ -182,35 +245,56 @@ function App() {
     }
   }, [])
 
+  const scrollToBottom = (smooth = true) => {
+    if (conversationRef.current) {
+      conversationRef.current.scrollTo({
+        top: conversationRef.current.scrollHeight,
+        behavior: smooth ? 'smooth' : 'auto',
+      })
+    }
+  }
+
   useEffect(() => {
     if (conversationRef.current && isAtBottomRef.current) {
-      // Only scroll to bottom if user was already at bottom
       setTimeout(() => {
-        if (conversationRef.current) {
-          conversationRef.current.scrollTop = conversationRef.current.scrollHeight
-        }
-      }, 0)
+        scrollToBottom(true)
+      }, 50)
     }
   }, [messages])
 
+  useEffect(() => {
+    if (auditListRef.current) {
+      auditListRef.current.scrollTop = auditListRef.current.scrollHeight
+    }
+  }, [audit])
+
   const getConversationHistory = () => {
-    return messages.map((msg) => ({ role: msg.type === 'user' ? 'user' : 'assistant', content: msg.text }))
+    return messages
+      .filter((msg) => !msg.isLoading)
+      .map((msg) => ({ role: msg.type === 'user' ? 'user' : 'assistant', content: msg.text }))
   }
 
   const sendMessage = async (text = draft) => {
     const value = text.trim()
     if (!value || isRunning) return
 
+    const userId = Date.now()
+    const loadingId = userId + 1
+
     setPipelineType(detectPipelineType(value))
+    isAtBottomRef.current = true
+
     setMessages((current) => [
       ...current,
-      { id: Date.now(), type: 'user', text: value },
-      { id: Date.now() + 1, type: 'agent', text: 'Checking the store...' },
+      { id: userId, type: 'user', text: value },
+      { id: loadingId, type: 'agent', text: getNaturalLoadingMessage(value), isLoading: true },
     ])
     setDraft('')
     setIsRunning(true)
     setResult(null)
     setAudit([])
+
+    setTimeout(() => scrollToBottom(true), 30)
 
     try {
       const response = await fetch(API_URL, {
@@ -255,25 +339,33 @@ function App() {
       const agentMessage = data.message || data.error || 'I could not complete that purchase request.'
       const suggestions = detectFollowUpQuestion(agentMessage)
       
-      setMessages((current) => [
-        ...current,
-        { 
-          id: Date.now(), 
-          type: 'agent', 
-          text: agentMessage,
-          suggestions: suggestions?.buttons || null,
-          suggestionType: suggestions?.type || null,
-        },
-      ])
+      setMessages((current) =>
+        current.map((msg) =>
+          msg.id === loadingId
+            ? {
+                id: loadingId,
+                type: 'agent',
+                text: agentMessage,
+                suggestions: suggestions?.buttons || null,
+                suggestionType: suggestions?.type || null,
+                isLoading: false,
+              }
+            : msg
+        )
+      )
     } catch (error) {
       const detail = error instanceof Error ? error.message : 'Unable to reach the AI buyer service.'
       setResult({ error: detail })
-      setMessages((current) => [
-        ...current,
-        { id: Date.now(), type: 'agent', text: detail },
-      ])
+      setMessages((current) =>
+        current.map((msg) =>
+          msg.id === loadingId
+            ? { id: loadingId, type: 'agent', text: detail, isLoading: false }
+            : msg
+        )
+      )
     } finally {
       setIsRunning(false)
+      setTimeout(() => scrollToBottom(true), 50)
     }
   }
 
@@ -372,16 +464,18 @@ function App() {
             </div>
 
             {audit.length > 0 ? (
-              audit.map((item, index) => (
-                <div className="audit-item" key={`audit-${index}`}>
-                  <span className="audit-dot" aria-hidden="true" />
-                  <div>
-                    <strong>{item?.event?.replaceAll('_', ' ') || 'event'}</strong>
-                    <p>{item?.detail || item?.event || 'Processing...'}</p>
+              <div className="audit-list" ref={auditListRef}>
+                {audit.map((item, index) => (
+                  <div className="audit-item" key={`audit-${index}`}>
+                    <span className="audit-dot" aria-hidden="true" />
+                    <div>
+                      <strong>{item?.event?.replaceAll('_', ' ') || 'event'}</strong>
+                      <p>{item?.detail || item?.event || 'Processing...'}</p>
+                    </div>
+                    <time>{item?.timestamp ? new Date(item.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'now'}</time>
                   </div>
-                  <time>{item?.timestamp ? new Date(item.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'now'}</time>
-                </div>
-              ))
+                ))}
+              </div>
             ) : (
               <div className="audit-placeholder">
                 <p>Awaiting the next purchase event...</p>

@@ -28,7 +28,19 @@ def search_product(query: str, max_price: float | None = None, category: str | N
 @mcp.tool()
 def list_products(category: str | None = None, include_out_of_stock: bool = False, min_price: float | None = None, max_price: float | None = None):
     """List products available in the store."""
-    return service.list_products(category, include_out_of_stock, min_price, max_price)
+    rows = service.list_products(category, include_out_of_stock, min_price, max_price)
+    if isinstance(rows, list) and len(rows) > 0:
+        by_cat = {}
+        for r in rows:
+            cat = (r.get("category") or "General").capitalize()
+            by_cat.setdefault(cat, []).append(f" - **{r.get('name')}** (ID #{r.get('id')}): ₹{r.get('price'):,.2f} [Stock: {r.get('stock')}]")
+        lines = ["Here is our complete catalog of available products:\n"]
+        for cat, items in sorted(by_cat.items()):
+            lines.append(f"### {cat}")
+            lines.extend(items)
+            lines.append("")
+        return "\n".join(lines)
+    return rows
 
 
 @mcp.tool()
@@ -62,9 +74,9 @@ def create_order(product_id: int, quantity: int, customer_name: str | None = Non
 
 
 @mcp.tool()
-def process_payment(order_id: int, payment_succeeded: bool, failure_reason: str | None = None):
-    """Record payment and release stock when payment fails."""
-    return service.process_payment(order_id, payment_succeeded, failure_reason)
+def process_payment(order_id: int, payment_succeeded: bool = True, failure_reason: str | None = None, razorpay_payment_id: str | None = None, razorpay_signature: str | None = None, otp: str | None = None):
+    """Record payment, verify OTP (default test OTP: 1111), and authorize order."""
+    return service.process_payment(order_id, payment_succeeded, failure_reason, razorpay_payment_id, razorpay_signature, otp)
 
 
 @mcp.tool()
@@ -104,10 +116,10 @@ def update_order_status(order_id: int, status: str):
 
 
 async def run_http_server():
-    app = mcp.streamable_http_app()
+    app = mcp.sse_app()
 
     async def homepage(request):
-        return PlainTextResponse("Gaming Store MCP server is running. MCP endpoint: /mcp")
+        return PlainTextResponse("Gaming Store MCP server is running. MCP SSE endpoint: /sse")
 
     app.add_route("/", homepage, methods=["GET"])
     await uvicorn.Server(uvicorn.Config(app, host=MCP_HOST, port=MCP_PORT, log_level="info")).serve()

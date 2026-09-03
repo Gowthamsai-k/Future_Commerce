@@ -2,3 +2,9 @@
 .env
 .env.*
 !.env.example
+__pycache__/
+*.pyc
+*.db
+buyer_audit.jsonl
+node_modules/
+dist/

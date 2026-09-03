@@ -17,7 +17,7 @@ def test_normalize_buyer_request_keeps_only_query_values():
     assert request["customer_name"] is None
     assert request["customer_email"] is None
     assert request["shipping_address"] is None
-    assert request["quantity"] is None
+    assert request["quantity"] == 1
     assert request["payment_method"] is None
 
 

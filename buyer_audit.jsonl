@@ -237,3 +237,446 @@
 {"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-01T06:50:45.001159+00:00", "tool_count": 14}
 {"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-01T06:50:45.100153+00:00"}
 {"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-01T06:50:46.094366+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:14:02.366001+00:00", "request": "hey list me the products you have", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:14:02.435002+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:14:02.560676+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:14:04.110595+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:14:17.991493+00:00", "request": "buy me a wirless controller under 5k maybe", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:14:18.035877+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:14:18.146847+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:14:29.410413+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:14:34.520672+00:00", "request": "Yes, buy it", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:14:34.580002+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:14:34.672447+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:14:47.785901+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:14:52.094821+00:00", "request": "1", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:14:52.140140+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:14:52.206426+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:15:08.572705+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:17:40.633528+00:00", "request": "can you buy me a headset under 5k maybe", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:17:40.676797+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:17:40.742329+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:17:41.679190+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:17:46.916211+00:00", "request": "1", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:17:46.961941+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:17:47.030340+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:17:48.057915+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:17:54.740190+00:00", "request": "Yes, buy it", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:17:54.781714+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:17:54.848648+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:17:55.938350+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:21:57.427376+00:00", "request": "can you buy me a controller under 5k", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:21:57.487850+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:21:57.613476+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:22:07.864773+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:22:19.124692+00:00", "request": "yes ok", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:22:19.169546+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:22:19.240527+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:22:34.767696+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:22:55.816083+00:00", "request": "yes upgrade my budget to what we have in the store", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:22:55.861813+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:22:55.932840+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:23:24.348350+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:23:35.121872+00:00", "request": "list me what you have", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:23:35.167756+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:23:35.242948+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:24:04.238481+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:24:40.171148+00:00", "request": "buy me a best gaming monitor no budget cap", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:24:40.212368+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:24:40.281871+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:24:41.117161+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:24:53.835161+00:00", "request": "1 qty", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:24:53.884469+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:24:53.953151+00:00"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:25:07.828924+00:00", "product_id": 8, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:25:07.874254+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:25:26.626436+00:00", "product_id": 8, "attempt": 2}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:25:26.673949+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:25:50.757465+00:00", "product_id": 8, "attempt": 3}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:25:50.851200+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:26:37.915419+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:28:00.358503+00:00", "request": "list me all the products you have , and buy me the best monitor out of it no budget cap", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:28:00.401367+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:28:00.467948+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:28:08.578553+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:28:14.402463+00:00", "request": "1", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:28:14.447618+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:28:14.513636+00:00"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:29:09.470904+00:00", "product_id": 8, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:29:09.518771+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:29:32.529175+00:00", "product_id": 8, "attempt": 2}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:29:32.579498+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:29:56.614027+00:00", "product_id": 8, "attempt": 3}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:29:56.661327+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:30:21.672727+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:37:53.540580+00:00", "request": "can you buy me a controller unde r5", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:37:53.590498+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:37:53.795878+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:37:56.339875+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:38:03.173957+00:00", "request": "just buy it", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:38:03.266206+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:38:03.347397+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:38:05.949167+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:38:31.461628+00:00", "request": "buy it", "budget": null, "quantity": null}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:38:31.508221+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:38:31.573354+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:38:55.143922+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:41:02.564285+00:00", "request": "can you buy me a controller under 5k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:41:02.622600+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:41:02.786713+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='controller', max_price=5000.0)", "timestamp": "2026-09-03T09:41:03.471330+00:00", "tool": "search_product", "arguments": {"query": "controller", "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T09:41:03.520558+00:00", "tool": "search_product"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:41:03.942878+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:41:11.764198+00:00", "request": "buy it", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:41:11.809401+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:41:11.883712+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='Xbox Wireless Controller')", "timestamp": "2026-09-03T09:41:12.537285+00:00", "tool": "search_product", "arguments": {"query": "Xbox Wireless Controller"}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T09:41:12.590562+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com', shipping_address='Mig chitraputri colony')", "timestamp": "2026-09-03T09:41:13.320458+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com", "shipping_address": "Mig chitraputri colony"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T09:41:13.387190+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:41:22.137215+00:00", "product_id": 6, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:41:22.189737+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:41:39.961856+00:00", "product_id": 6, "attempt": 2}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:41:40.008762+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:41:59.115729+00:00", "product_id": 6, "attempt": 3}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:41:59.171130+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:42:18.404578+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:45:56.373348+00:00", "request": "can you buy me a controller no budget cpa", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:45:56.433322+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:45:56.573804+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:48:34.953303+00:00", "request": "buy me a controller no budget cap's", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:48:35.012036+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:48:35.240224+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='controller')", "timestamp": "2026-09-03T09:48:35.857413+00:00", "tool": "search_product", "arguments": {"query": "controller"}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T09:48:35.908451+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com', shipping_address='Mig chitraputri colony')", "timestamp": "2026-09-03T09:48:36.616895+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com", "shipping_address": "Mig chitraputri colony"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T09:48:37.082772+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:48:37.566590+00:00", "product_id": 6, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:48:37.613616+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:48:38.302358+00:00", "product_id": 6, "attempt": 2}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:48:38.364977+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:49:04.237186+00:00", "product_id": 6, "attempt": 3}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:49:04.365911+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:49:09.563067+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:49:34.563605+00:00", "request": "can you buy me some prodocut , no budget cap", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:49:34.604822+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:49:34.678131+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:49:35.633563+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:49:42.317708+00:00", "request": "any", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:50:13.512799+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:50:13.585916+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:50:14.583770+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:50:24.694884+00:00", "request": "show me what you got", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:50:24.743523+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:50:24.850031+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='controller')", "timestamp": "2026-09-03T09:50:25.505969+00:00", "tool": "search_product", "arguments": {"query": "controller"}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T09:50:25.561673+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com', shipping_address='Mig chitraputri colony')", "timestamp": "2026-09-03T09:50:26.200543+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com", "shipping_address": "Mig chitraputri colony"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T09:50:26.263153+00:00", "tool": "register_customer"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:50:36.371945+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:50:43.035793+00:00", "request": "buy it", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:50:43.081354+00:00", "tool_count": 13}
+{"event": "preferences", "detail": "Buyer preferences and budget supplied to agent", "timestamp": "2026-09-03T09:50:43.154429+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='Xbox Wireless Controller')", "timestamp": "2026-09-03T09:50:55.095358+00:00", "tool": "search_product", "arguments": {"query": "Xbox Wireless Controller"}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T09:50:55.149598+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com', shipping_address='Mig chitraputri colony')", "timestamp": "2026-09-03T09:51:14.065604+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com", "shipping_address": "Mig chitraputri colony"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T09:51:14.121438+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:51:32.925644+00:00", "product_id": 6, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:51:32.984410+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:51:51.885316+00:00", "product_id": 6, "attempt": 2}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:51:51.935513+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T09:52:11.940747+00:00", "product_id": 6, "attempt": 3}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T09:52:11.990342+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T09:52:33.132863+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T09:58:38.163020+00:00", "request": "buy me a controller no budget cap", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T09:58:38.223439+00:00", "tool_count": 13}
+{"event": "error", "detail": "Agent execution error on 'minimaxai/minimax-m2.7': Error code: 404 - {'error': {'message': 'The model `minimaxai/minimax-m2.7` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}", "timestamp": "2026-09-03T09:58:38.526275+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:07:52.952554+00:00", "request": "hey", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:07:53.021421+00:00", "tool_count": 13}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='controller', category='Gaming Accessories')", "timestamp": "2026-09-03T10:07:54.268606+00:00", "tool": "search_product", "arguments": {"query": "controller", "category": "Gaming Accessories"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:07:54.316003+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='Gaming Accessories', include_out_of_stock=False)", "timestamp": "2026-09-03T10:07:55.020003+00:00", "tool": "list_products", "arguments": {"category": "Gaming Accessories", "include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:07:55.080344+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:07:55.850573+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:08:08.324534+00:00", "request": "hey , show me what you got", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:08:08.378587+00:00", "tool_count": 13}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T10:08:10.085564+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 8 product(s)", "timestamp": "2026-09-03T10:08:10.175208+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:08:11.052455+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:08:24.345535+00:00", "request": "buy acer nitrro monitor", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:08:24.392193+00:00", "tool_count": 13}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:08:25.302753+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:08:25.377707+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:08:26.090349+00:00", "product_id": 8, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:08:26.141440+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:08:27.135162+00:00", "product_id": 8, "attempt": 2}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:08:27.192247+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "mcp_tool_execution", "detail": "Executing tool: get_product(product_id=8)", "timestamp": "2026-09-03T10:08:35.301997+00:00", "tool": "get_product", "arguments": {"product_id": 8}}
+{"event": "mcp_tool_result", "detail": "get_product: found 'Acer Nitro 24 Gaming Monitor' ($11999.0)", "timestamp": "2026-09-03T10:08:35.359836+00:00", "tool": "get_product"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:08:49.091536+00:00", "product_id": 8, "attempt": 3}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:08:49.176528+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "auto_fix", "detail": "Customer ID missing. Automatically registering customer identity", "timestamp": "2026-09-03T10:09:04.443541+00:00", "name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}
+{"event": "auto_fix_success", "detail": "Registered customer with ID #2", "timestamp": "2026-09-03T10:09:04.495459+00:00"}
+{"event": "auto_fix", "detail": "Customer ID missing. Automatically registering customer identity", "timestamp": "2026-09-03T10:09:18.705887+00:00", "name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}
+{"event": "auto_fix_success", "detail": "Registered customer with ID #2", "timestamp": "2026-09-03T10:09:18.766258+00:00"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:09:37.043849+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:17:26.368657+00:00", "request": "hey show me if there are any controllers under 5k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:17:26.428571+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='controller', max_price=5000.0)", "timestamp": "2026-09-03T10:17:27.256759+00:00", "tool": "search_product", "arguments": {"query": "controller", "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T10:17:27.312391+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='controller', include_out_of_stock=False, max_price=5000.0)", "timestamp": "2026-09-03T10:17:27.892722+00:00", "tool": "list_products", "arguments": {"category": "controller", "include_out_of_stock": false, "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:17:27.942528+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:17:28.655386+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:17:36.513920+00:00", "request": "buy me that", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:17:36.574608+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='Xbox Wireless Controller', category='controllers')", "timestamp": "2026-09-03T10:17:37.512337+00:00", "tool": "search_product", "arguments": {"query": "Xbox Wireless Controller", "category": "controllers"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:17:37.583367+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='controllers', include_out_of_stock=False)", "timestamp": "2026-09-03T10:17:38.332748+00:00", "tool": "list_products", "arguments": {"category": "controllers", "include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:17:38.393636+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='Xbox Wireless Controller')", "timestamp": "2026-09-03T10:17:39.182897+00:00", "tool": "search_product", "arguments": {"query": "Xbox Wireless Controller"}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Xbox Wireless Controller' ($5499.0)", "timestamp": "2026-09-03T10:17:39.238068+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:17:40.067173+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:17:40.136378+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:17:44.958003+00:00", "product_id": 6, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:17:45.016952+00:00", "total": 5499.0, "running_total": 5499.0}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:17:56.374414+00:00", "order_id": 8, "attempt": 1}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:18:01.193552+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:20:21.174649+00:00", "request": "can you list me what you got", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:20:21.222403+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T10:20:22.095681+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'Acer Nitro 24 Gaming Monitor' ($11999.0)", "timestamp": "2026-09-03T10:20:22.142262+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:20:22.919085+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:20:30.810917+00:00", "request": "buy that", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:20:30.864334+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:20:31.801317+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:20:31.936605+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:20:32.667805+00:00", "product_id": 8, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:20:32.716756+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:20:33.759497+00:00", "order_id": 9, "attempt": 1}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:20:34.485402+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:29:32.578356+00:00", "request": "can you list me the products u have", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:29:32.633368+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T10:29:33.321747+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T10:29:33.438277+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:29:34.297169+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:29:45.935953+00:00", "request": "ASUS TUF Gaming 27\u2011inch WQHD buy me this", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:29:45.982953+00:00", "tool_count": 14}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:29:47.303342+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:29:58.947517+00:00", "request": "just buy it , no budget caps", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:29:58.994237+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='ASUS TUF Gaming 27\u2011inch WQHD monitor')", "timestamp": "2026-09-03T10:29:59.995291+00:00", "tool": "search_product", "arguments": {"query": "ASUS TUF Gaming 27\u2011inch WQHD monitor"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:30:00.046565+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='ASUS TUF Gaming 27\u2011inch WQHD', category='Monitors')", "timestamp": "2026-09-03T10:30:00.998146+00:00", "tool": "search_product", "arguments": {"query": "ASUS TUF Gaming 27\u2011inch WQHD", "category": "Monitors"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:30:01.067695+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='Monitors', include_out_of_stock=False)", "timestamp": "2026-09-03T10:30:01.622531+00:00", "tool": "list_products", "arguments": {"category": "Monitors", "include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:30:01.689744+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='Monitors', include_out_of_stock=True)", "timestamp": "2026-09-03T10:30:02.542791+00:00", "tool": "list_products", "arguments": {"category": "Monitors", "include_out_of_stock": true}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:30:02.600634+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:30:03.419597+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:30:15.188595+00:00", "request": "can you list me theproducts", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:30:15.240714+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T10:30:15.803727+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T10:30:15.874582+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:30:16.729367+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:30:29.133478+00:00", "request": "ASUS TUF Gaming 27\u2011inch WQHD 170\u202fHz Monitor\ncan you buy me this", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:30:29.183349+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: find_alternative_products(product_id=26, max_price=170.0)", "timestamp": "2026-09-03T10:30:30.346555+00:00", "tool": "find_alternative_products", "arguments": {"product_id": 26, "max_price": 170.0}}
+{"event": "mcp_tool_result", "detail": "find_alternative_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:30:30.410938+00:00", "tool": "find_alternative_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:30:31.313058+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:30:36.095843+00:00", "request": "buy it", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:30:36.145775+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: find_alternative_products(product_id=0, max_price=170.0)", "timestamp": "2026-09-03T10:30:37.217203+00:00", "tool": "find_alternative_products", "arguments": {"product_id": 0, "max_price": 170.0}}
+{"event": "mcp_tool_result", "detail": "find_alternative_products: error - Product not found", "timestamp": "2026-09-03T10:30:37.276618+00:00", "tool": "find_alternative_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:30:47.504573+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:30:52.449010+00:00", "request": "Yes, increase budget", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:30:52.500427+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='ASUS TUF Gaming 27-inch WQHD 170 Hz monitor')", "timestamp": "2026-09-03T10:30:56.643811+00:00", "tool": "search_product", "arguments": {"query": "ASUS TUF Gaming 27-inch WQHD 170 Hz monitor"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:30:56.700468+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='Monitors', include_out_of_stock=True)", "timestamp": "2026-09-03T10:31:06.385985+00:00", "tool": "list_products", "arguments": {"category": "Monitors", "include_out_of_stock": true}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:31:06.434437+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:31:15.395040+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:31:42.528564+00:00", "request": "can you show me all the products you have", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:31:42.585739+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T10:31:43.261122+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T10:31:43.317259+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T10:31:43.974865+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T10:31:44.026477+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=True)", "timestamp": "2026-09-03T10:31:44.994336+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": true}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T10:31:45.043839+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:31:47.003208+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:32:16.683749+00:00", "request": "6\tASUS TUF Gaming 27\u2011inch WQHD 170\u202fHz Monitor\tMonitor\tASUS\t24,999\t5\nbuy me this", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:32:16.735794+00:00", "tool_count": 14}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:32:17.834736+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:33:55.315661+00:00", "request": "can you buy me a monitor under 15k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:33:55.357084+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='monitor', max_price=15000.0)", "timestamp": "2026-09-03T10:33:56.089664+00:00", "tool": "search_product", "arguments": {"query": "monitor", "max_price": 15000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Acer Nitro 24 Gaming Monitor' ($11999.0)", "timestamp": "2026-09-03T10:33:56.158500+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:33:56.932201+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:33:57.004410+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:33:57.911865+00:00", "product_id": 8, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:33:57.982772+00:00", "total": 11999.0, "running_total": 11999.0}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:33:59.770312+00:00", "order_id": 12, "attempt": 1}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:34:00.318454+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:35:54.209513+00:00", "request": "can you buy me a mice under 5k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:35:54.278697+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='mouse', max_price=5000.0)", "timestamp": "2026-09-03T10:35:55.016982+00:00", "tool": "search_product", "arguments": {"query": "mouse", "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Logitech G102 Gaming Mouse' ($1299.0)", "timestamp": "2026-09-03T10:35:55.070664+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:35:55.776137+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:35:55.842749+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:35:56.488257+00:00", "product_id": 1, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:35:56.539994+00:00", "total": 1299.0, "running_total": 1299.0}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:35:58.459212+00:00", "order_id": 14, "attempt": 1}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:35:59.178656+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:42:46.936966+00:00", "request": "buy me a gaming mouse under 5k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:42:47.009331+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming mouse', max_price=5000.0, category='Gaming Mouse')", "timestamp": "2026-09-03T10:42:47.781448+00:00", "tool": "search_product", "arguments": {"query": "gaming mouse", "max_price": 5000.0, "category": "Gaming Mouse"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:42:47.839092+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='Gaming Mouse', include_out_of_stock=False, max_price=5000.0)", "timestamp": "2026-09-03T10:42:48.131304+00:00", "tool": "list_products", "arguments": {"category": "Gaming Mouse", "include_out_of_stock": false, "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:42:48.190995+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False, max_price=5000.0)", "timestamp": "2026-09-03T10:42:48.852326+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false, "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'Corsair K55 RGB PRO Gaming Keyboard' ($3799.0)", "timestamp": "2026-09-03T10:42:48.906041+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming mouse', max_price=5000.0, category='mouse')", "timestamp": "2026-09-03T10:42:49.372254+00:00", "tool": "search_product", "arguments": {"query": "gaming mouse", "max_price": 5000.0, "category": "mouse"}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Logitech G102 Gaming Mouse' ($1299.0)", "timestamp": "2026-09-03T10:42:49.432708+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:42:50.338449+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:42:50.425851+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:42:51.100921+00:00", "product_id": 1, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:42:51.162534+00:00", "total": 1299.0, "running_total": 1299.0}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:42:57.249194+00:00", "order_id": 18, "attempt": 1}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:43:09.045344+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:44:36.550633+00:00", "request": "buy me a gaming headset under 10k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:44:36.606583+00:00", "tool_count": 14}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming headset', max_price=10000.0, category='Headphones')", "timestamp": "2026-09-03T10:44:37.644976+00:00", "tool": "search_product", "arguments": {"query": "gaming headset", "max_price": 10000.0, "category": "Headphones"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:44:37.691243+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(category='Headphones', include_out_of_stock=False, max_price=10000.0)", "timestamp": "2026-09-03T10:44:38.264479+00:00", "tool": "list_products", "arguments": {"category": "Headphones", "include_out_of_stock": false, "max_price": 10000.0}}
+{"event": "mcp_tool_result", "detail": "list_products: fetched 0 product(s)", "timestamp": "2026-09-03T10:44:38.306704+00:00", "tool": "list_products"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming headset', category='Headphones')", "timestamp": "2026-09-03T10:44:39.116646+00:00", "tool": "search_product", "arguments": {"query": "gaming headset", "category": "Headphones"}}
+{"event": "mcp_tool_result", "detail": "search_product: fetched 0 product(s)", "timestamp": "2026-09-03T10:44:39.169243+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming headset', max_price=10000.0)", "timestamp": "2026-09-03T10:44:39.672840+00:00", "tool": "search_product", "arguments": {"query": "gaming headset", "max_price": 10000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'HyperX Cloud Stinger 2' ($3499.0)", "timestamp": "2026-09-03T10:44:39.714563+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:44:40.457668+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:44:40.512724+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:44:41.165595+00:00", "product_id": 4, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:44:41.212861+00:00", "total": 3499.0, "running_total": 3499.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:44:42.917536+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:44:45.354530+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:44:45.396412+00:00", "tool_count": 14}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:44:48.196497+00:00", "order_id": 19, "attempt": 1, "otp": "1111"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:44:58.180955+00:00", "order_id": 19, "attempt": 2, "otp": "1111"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_orders(customer_email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:45:08.010917+00:00", "tool": "list_orders", "arguments": {"customer_email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "list_orders: completed successfully", "timestamp": "2026-09-03T10:45:08.059221+00:00", "tool": "list_orders"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:45:22.196158+00:00", "order_id": 19, "attempt": 3, "otp": "1111"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:45:31.410138+00:00", "order_id": 19, "attempt": 4, "otp": null}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:45:47.128952+00:00", "order_id": 19, "attempt": 5, "otp": "1111"}
+{"event": "model_failover", "detail": "Model 'openai/gpt-oss-120b' unavailable or rate-limited (Error code: 429 - {'error': {'message': 'Rate limit reached ...). Switching to next model...", "timestamp": "2026-09-03T10:45:47.268912+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:45:48.482096+00:00", "order_id": 19, "attempt": 6, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:45:49.252052+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:45:54.605324+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:45:54.649819+00:00", "tool_count": 14}
+{"event": "model_failover", "detail": "Model 'openai/gpt-oss-120b' unavailable or rate-limited (Error code: 429 - {'error': {'message': 'Rate limit reached ...). Switching to next model...", "timestamp": "2026-09-03T10:45:54.849917+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming headset', max_price=10000.0)", "timestamp": "2026-09-03T10:45:56.023288+00:00", "tool": "search_product", "arguments": {"query": "gaming headset", "max_price": 10000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'HyperX Cloud Stinger 2' ($3499.0)", "timestamp": "2026-09-03T10:45:56.072024+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: check_inventory(product_id=4)", "timestamp": "2026-09-03T10:45:56.987722+00:00", "tool": "check_inventory", "arguments": {"product_id": 4}}
+{"event": "mcp_tool_result", "detail": "check_inventory: completed successfully", "timestamp": "2026-09-03T10:45:57.075078+00:00", "tool": "check_inventory"}
+{"event": "auto_fix", "detail": "Customer ID missing. Automatically registering customer identity", "timestamp": "2026-09-03T10:46:10.056836+00:00", "name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}
+{"event": "auto_fix_success", "detail": "Registered customer with ID #2", "timestamp": "2026-09-03T10:46:10.103549+00:00"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:46:10.103577+00:00", "product_id": 4, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:46:10.158199+00:00", "total": 3499.0, "running_total": 3499.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:46:25.985385+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:46:33.807784+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:46:33.862665+00:00", "tool_count": 14}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:46:34.606460+00:00", "order_id": 20, "attempt": 1, "otp": "1111"}
+{"event": "model_failover", "detail": "Model 'openai/gpt-oss-120b' unavailable or rate-limited (Error code: 429 - {'error': {'message': 'Rate limit reached ...). Switching to next model...", "timestamp": "2026-09-03T10:46:34.752587+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:46:39.952835+00:00", "order_id": 20, "attempt": 2, "otp": "1111"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: get_order(order_id=20)", "timestamp": "2026-09-03T10:46:56.615501+00:00", "tool": "get_order", "arguments": {"order_id": 20}}
+{"event": "mcp_tool_result", "detail": "get_order: completed successfully", "timestamp": "2026-09-03T10:46:56.666171+00:00", "tool": "get_order"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:47:13.380226+00:00", "order_id": 20, "attempt": 3, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:47:32.338236+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:51:08.161954+00:00", "request": "buy me a mice under 5k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:51:08.203228+00:00", "tool_count": 14}
+{"event": "model_failover", "detail": "Model 'openai/gpt-oss-120b' unavailable or rate-limited (Error code: 429 - {'error': {'message': 'Rate limit reached ...). Switching to next model...", "timestamp": "2026-09-03T10:51:08.402046+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming mouse', max_price=5000.0)", "timestamp": "2026-09-03T10:51:09.522040+00:00", "tool": "search_product", "arguments": {"query": "gaming mouse", "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Logitech G102 Gaming Mouse' ($1299.0)", "timestamp": "2026-09-03T10:51:09.572235+00:00", "tool": "search_product"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T10:51:10.574428+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T10:51:10.619343+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:51:25.032353+00:00", "product_id": 1, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:51:25.915702+00:00", "total": 1299.0, "running_total": 1299.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:51:43.817428+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:52:12.390819+00:00", "request": "buy me a mouse under 5k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:52:12.447713+00:00", "tool_count": 14}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:52:12.761628+00:00"}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:52:13.404141+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='gaming mouse', max_price=5000.0)", "timestamp": "2026-09-03T10:52:14.609067+00:00", "tool": "search_product", "arguments": {"query": "gaming mouse", "max_price": 5000.0}}
+{"event": "mcp_tool_result", "detail": "search_product: found 'Logitech G102 Gaming Mouse' ($1299.0)", "timestamp": "2026-09-03T10:52:14.685624+00:00", "tool": "search_product"}
+{"event": "auto_fix", "detail": "Customer ID missing. Automatically registering customer identity", "timestamp": "2026-09-03T10:52:15.455593+00:00", "name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}
+{"event": "auto_fix_success", "detail": "Registered customer with ID #2", "timestamp": "2026-09-03T10:52:15.533379+00:00"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T10:52:15.533405+00:00", "product_id": 1, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T10:52:15.599644+00:00", "total": 1299.0, "running_total": 1299.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:52:32.535984+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:52:35.828389+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:52:35.875360+00:00", "tool_count": 14}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:52:36.060635+00:00"}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:52:36.698681+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:52:47.922927+00:00", "order_id": 23, "attempt": 1, "otp": "1111"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:53:03.760497+00:00", "order_id": 23, "attempt": 2, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:53:20.517091+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:53:27.731033+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:53:27.790829+00:00", "tool_count": 14}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:53:27.986351+00:00"}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:53:28.624300+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T10:53:37.053766+00:00", "order_id": 23, "attempt": 1, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:53:52.946453+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T10:54:24.112706+00:00", "request": "Cancel Order", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T10:54:24.158999+00:00", "tool_count": 14}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:54:24.355545+00:00"}
+{"event": "model_failover", "detail": "Model 'nemotron-3-ultra' unavailable or rate-limited (Error code: 404 - {'error': {'message': 'The model `nemotron...). Switching to next model...", "timestamp": "2026-09-03T10:54:25.031458+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: cancel_order(order_id=23)", "timestamp": "2026-09-03T10:54:26.372693+00:00", "tool": "cancel_order", "arguments": {"order_id": 23}}
+{"event": "mcp_tool_result", "detail": "cancel_order: completed successfully", "timestamp": "2026-09-03T10:54:26.506061+00:00", "tool": "cancel_order"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T10:54:27.401381+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:01:34.802367+00:00", "request": "can you list me all the productrs", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:01:34.930262+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:01:35.091485+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T11:01:35.712030+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T11:01:35.766331+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:01:36.524182+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:01:50.279778+00:00", "request": "ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor buy me this", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:01:50.319234+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:01:50.353012+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: search_product(query='ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor')", "timestamp": "2026-09-03T11:01:51.408311+00:00", "tool": "search_product", "arguments": {"query": "ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor"}}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:01:51.408911+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T11:01:51.522875+00:00", "tool": "register_customer"}
+{"event": "mcp_tool_result", "detail": "search_product: found 'ASUS TUF Gaming 27 Inch WQHD 170Hz Monitor' ($24999.0)", "timestamp": "2026-09-03T11:01:51.522988+00:00", "tool": "search_product"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T11:01:53.291277+00:00", "product_id": 26, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T11:01:53.339516+00:00", "total": 24999.0, "running_total": 24999.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:01:56.265827+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:01:57.937582+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:01:57.978905+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:01:58.009882+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:01:58.902817+00:00", "order_id": 27, "attempt": 1, "otp": "1111"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: get_order(order_id=27)", "timestamp": "2026-09-03T11:02:02.538991+00:00", "tool": "get_order", "arguments": {"order_id": 27}}
+{"event": "mcp_tool_result", "detail": "get_order: completed successfully", "timestamp": "2026-09-03T11:02:02.595057+00:00", "tool": "get_order"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:02:03.246057+00:00", "order_id": 27, "attempt": 2, "otp": "1111"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:02:03.925732+00:00", "order_id": 27, "attempt": 3, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:02:04.654721+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:09:12.823325+00:00", "request": "can you list me all the products you have", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:09:12.880357+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:09:12.905850+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: list_products(include_out_of_stock=False)", "timestamp": "2026-09-03T11:09:13.529670+00:00", "tool": "list_products", "arguments": {"include_out_of_stock": false}}
+{"event": "mcp_tool_result", "detail": "list_products: completed", "timestamp": "2026-09-03T11:09:13.585690+00:00", "tool": "list_products"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:09:17.044703+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:09:31.496386+00:00", "request": "can you buy me a laptop under 50k", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:09:31.544386+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:09:31.574929+00:00"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: register_customer(name='Gowtham Vithal Sai', email='gowthamsai0519@gmail.com')", "timestamp": "2026-09-03T11:09:32.598490+00:00", "tool": "register_customer", "arguments": {"name": "Gowtham Vithal Sai", "email": "gowthamsai0519@gmail.com"}}
+{"event": "mcp_tool_result", "detail": "register_customer: identity updated for 'Gowtham Vithal Sai'", "timestamp": "2026-09-03T11:09:32.666475+00:00", "tool": "register_customer"}
+{"event": "budget_check", "detail": "Checking product total against buyer budget", "timestamp": "2026-09-03T11:09:33.552480+00:00", "product_id": 27, "attempt": 1}
+{"event": "purchase", "detail": "Budget approved; creating order", "timestamp": "2026-09-03T11:09:33.602315+00:00", "total": 46999.0, "running_total": 46999.0}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:09:35.749505+00:00"}
+{"event": "started", "detail": "Buyer protocol started", "timestamp": "2026-09-03T11:09:38.930872+00:00", "request": "1111", "budget": null, "quantity": 1}
+{"event": "connected", "detail": "Connected to the store MCP server", "timestamp": "2026-09-03T11:09:38.984739+00:00", "tool_count": 14}
+{"event": "provider_select", "detail": "Using Ollama model 'gemma4:cloud' at http://localhost:11434", "timestamp": "2026-09-03T11:09:39.016412+00:00"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:09:39.779691+00:00", "order_id": 28, "attempt": 1, "otp": "1111"}
+{"event": "mcp_tool_execution", "detail": "Executing tool: get_order(order_id=28)", "timestamp": "2026-09-03T11:09:40.387497+00:00", "tool": "get_order", "arguments": {"order_id": 28}}
+{"event": "mcp_tool_result", "detail": "get_order: completed successfully", "timestamp": "2026-09-03T11:09:40.442201+00:00", "tool": "get_order"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:09:41.078402+00:00", "order_id": 28, "attempt": 2, "otp": "1111"}
+{"event": "payment_attempt", "detail": "Attempting payment", "timestamp": "2026-09-03T11:09:42.465058+00:00", "order_id": 28, "attempt": 3, "otp": "1111"}
+{"event": "completed", "detail": "Buyer protocol completed", "timestamp": "2026-09-03T11:09:43.105566+00:00"}

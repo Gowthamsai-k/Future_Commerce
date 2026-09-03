@@ -75,10 +75,19 @@ async def buyer(request: Request):
 async def health(request: Request):
     return JSONResponse({"status": "ok", "service": "ai-buyer"})
 
+routes = [
+    Route("/api/buyer", buyer, methods=["POST"]),
+    Route("/health", health, methods=["GET"])
+]
 
-app = CORSMiddleware(Starlette(routes=[Route("/api/buyer", buyer, methods=["POST"]), Route("/health", health, methods=["GET"])]), allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"])
+dist_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "ai-face", "dist")
+if os.path.exists(dist_dir):
+    routes.append(Mount("/", app=StaticFiles(directory=dist_dir, html=True), name="static"))
+
+app = CORSMiddleware(Starlette(routes=routes), allow_origins=["*"], allow_methods=["GET", "POST"], allow_headers=["*"])
 
 
 def main():
     import uvicorn
-    uvicorn.run(app, host=AI_API_HOST, port=AI_API_PORT)
+    port = int(os.getenv("PORT", AI_API_PORT))
+    uvicorn.run(app, host="0.0.0.0", port=port)

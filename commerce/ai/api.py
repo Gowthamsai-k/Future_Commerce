@@ -1,11 +1,13 @@
 import asyncio
 import json
+import os
 
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse, StreamingResponse
-from starlette.routing import Route
+from starlette.routing import Mount, Route
+from starlette.staticfiles import StaticFiles
 
 from commerce.ai.buyer import run_buyer
 from commerce.config import AI_API_HOST, AI_API_PORT, AUDIT_FILE

@@ -374,12 +374,15 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
             if isinstance(result, dict) and result.get("success"):
                 order_id = result.get("order_id")
                 committed_total += total
+                payment_link = result.get("razorpay_payment_link", "")
+                
                 summary = {
                     "product": result.get("product") or product.get("name"),
                     "quantity": requested_quantity,
                     "total": float(result.get("total", total)),
                     "order_id": order_id,
                     "razorpay_order_id": result.get("razorpay_order_id"),
+                    "razorpay_payment_link": payment_link,
                     "status": "created",
                     "customer_name": customer_name,
                     "customer_email": customer_email,
@@ -387,33 +390,15 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
                     "payment_status": "pending",
                 }
                 
-                # FULLY AUTONOMOUS PAYMENT: Immediately authorize payment in background
-                record("autonomous_payment", f"Executing autonomous test payment authorization for Order #{order_id}...", order_id=order_id)
-                try:
-                    sim_res = simulate_fake_card_payment(
-                        payment_link_url=result.get("razorpay_payment_link"),
-                        razorpay_order_id=result.get("razorpay_order_id"),
-                        order_id=order_id,
-                        amount=float(result.get("total", total))
-                    )
-                    record("fake_card_simulation", f"Domestic Indian card payment authorization event dispatched for Razorpay Order: {result.get('razorpay_order_id')} (Card: Domestic Indian Visa 4000 **** **** 0002)")
-
-                    pay_res = await call_with_retries(tools, "process_payment", {
-                        "order_id": order_id,
-                        "payment_succeeded": True,
-                        "otp": "1111"
-                    })
-                    if isinstance(pay_res, dict) and pay_res.get("success"):
-                        summary["payment_status"] = "paid"
-                        summary["status"] = "processing"
-                        summary["razorpay_payment_id"] = pay_res.get("razorpay_payment_id", f"pay_fake_card_{order_id}")
-                        result["payment_status"] = "paid"
-                        result["status"] = "processing"
-                        result["razorpay_payment_id"] = pay_res.get("razorpay_payment_id")
-                        result["message"] = f"✅ Order #{order_id} for {summary['product']} (Total: ₹{total:,.2f}) placed and paid successfully via Razorpay (Autonomous Domestic Indian Card Simulation: Visa 4000 **** **** 0002)!"
-                        record("autonomous_payment_success", f"Autonomous domestic Indian card payment completed for Order #{order_id}! Status: paid", order_id=order_id)
-                except Exception as p_err:
-                    record("autonomous_payment_warning", f"Autonomous payment notice: {p_err}")
+                result["payment_status"] = "pending"
+                result["status"] = "created"
+                result["message"] = (
+                    f"🛒 Order #{order_id} created for {summary['product']} (Total: ₹{total:,.2f})!\n\n"
+                    f"🔗 **Razorpay Payment Link**: {payment_link}\n\n"
+                    f"Please complete the payment on the link above using a domestic test card (`4000 0000 0000 0002`) or test UPI (`success@razorpay`). "
+                    f"Once completed, let me know or check the status!"
+                )
+                record("order_created_awaiting_payment", f"Order #{order_id} created. Awaiting payment on link: {payment_link}", order_id=order_id)
 
             return json.dumps(result)
 
@@ -568,13 +553,13 @@ Target Request: {original_product_request}
 Input: {product_request} | Existing Order ID: {order_id_text} | Budget: {inferred_budget_text} | Qty: {quantity_text} | Customer: {customer_text} | Payment: {payment_text}{conversation_context}
 
 Rules:
-1. FULLY AUTONOMOUS PAYMENT FLOW:
-   - When user asks to buy an item, execute `create_budget_checked_order`. The tool automatically handles order reservation and test payment authorization in background.
-   - Present final order confirmation with Order ID, Product, Total, Payment Status (paid), and Razorpay Payment ID.
+1. ORDER CREATION & PAYMENT LINK WORKFLOW:
+   - When user asks to buy an item, execute `create_budget_checked_order`.
+   - Present the order confirmation with Order ID, Product, Total Amount, and the **Razorpay Payment Link URL**.
+   - Direct the user to open the link and complete the test payment (using Domestic Indian test card `4000 0000 0000 0002` or test UPI `success@razorpay`).
 2. DEFAULT QUANTITY: Default quantity is 1 unless specified. Do not ask for quantity.
 3. BUDGET: Respect the hard max budget. If item fits, buy it. If item is slightly over, auto-switch to in-stock alternative.
-4. AUTONOMOUS VERIFICATION: The agent handles payment authorization automatically with full user consent.
-5. CATALOG & LISTING: If the user request is to list, browse, or show products (e.g., 'list me all the products', 'show catalog', 'what items do you have'), DO NOT pick a single item or attempt to buy. Call `list_products` or `search_product` and present ALL products from the tool response grouped by category with their names and prices in INR (₹)."""
+4. CATALOG & LISTING: If the user request is to list, browse, or show products (e.g., 'list me all the products', 'show catalog', 'what items do you have'), DO NOT pick a single item or attempt to buy. Call `list_products` or `search_product` and present ALL products from the tool response grouped by category with their names and prices in INR (₹)."""
 
     if not GROQ_API_KEY:
         raise RuntimeError("GROQ_API_KEY is required. Add it to .env before running ai.py.")
@@ -668,7 +653,8 @@ Rules:
 
     compiled_summary = summary or summarize_audit(audit)
     if compiled_summary and compiled_summary.get("order_id"):
-        fallback_message = f"✅ Order #{compiled_summary.get('order_id')} for {compiled_summary.get('product')} (Qty: {compiled_summary.get('quantity', 1)}) placed successfully for ₹{float(compiled_summary.get('total', 0)):,.2f}! Payment status: {compiled_summary.get('payment_status', 'paid')} via Razorpay."
+        link_str = f"\n\n🔗 **Razorpay Payment Link**: {compiled_summary.get('razorpay_payment_link', '')}" if compiled_summary.get('razorpay_payment_link') else ""
+        fallback_message = f"🛒 Order #{compiled_summary.get('order_id')} for {compiled_summary.get('product')} (Qty: {compiled_summary.get('quantity', 1)}) created for ₹{float(compiled_summary.get('total', 0)):,.2f}!{link_str}\n\nPlease complete your payment on Razorpay."
         if not final_message or "without a final message" in final_message:
             final_message = fallback_message
     elif not final_message or "without a final message" in final_message:

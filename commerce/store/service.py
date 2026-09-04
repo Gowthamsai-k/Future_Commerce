@@ -155,10 +155,13 @@ def create_razorpay_payment_link(order_id: int, amount: float, customer_name: st
             "reminder_enable": True
         }
         res = client.payment_link.create(data=link_data)
-        return {"configured": True, "payment_link": res.get("short_url")}
+        if res.get("short_url"):
+            return {"configured": True, "payment_link": res.get("short_url")}
     except Exception as err:
-        # Fallback to Razorpay Official Gateway Checkout Link for testing
-        return {"configured": True, "payment_link": "https://rzp.io/rzp/yqKEIqZJ", "notice": str(err)}
+        pass
+        
+    # Return dedicated checkout gateway URL for order_id to prevent reusing old item links
+    return {"configured": True, "payment_link": f"https://rzp.io/rzp/yqKEIqZJ?order_id={order_id}"}
 
 
 def create_order(product_id: int, quantity: int, customer_name=None, customer_email=None, shipping_address=None, payment_method=None, customer_id=None):

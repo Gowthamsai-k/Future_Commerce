@@ -74,11 +74,33 @@ async def buyer(request: Request):
     return StreamingResponse(stream(), media_type="application/x-ndjson")
 
 
-async def health(request: Request):
-    return JSONResponse({"status": "ok", "service": "ai-buyer"})
+async def razorpay_webhook(request: Request):
+    try:
+        payload = await request.json()
+        event = payload.get("event")
+        if event in ("order.paid", "payment.captured", "payment.authorized"):
+            payment_entity = payload.get("payload", {}).get("payment", {}).get("entity", {})
+            order_entity = payload.get("payload", {}).get("order", {}).get("entity", {})
+            razorpay_order_id = order_entity.get("id") or payment_entity.get("order_id")
+            razorpay_payment_id = payment_entity.get("id", f"pay_webhook_{int(asyncio.get_event_loop().time())}")
+            
+            if razorpay_order_id:
+                from commerce.db.connection import get_connection
+                conn = get_connection()
+                conn.execute(
+                    "UPDATE orders SET payment_status = 'paid', status = 'processing', razorpay_payment_id = ?, updated_at = CURRENT_TIMESTAMP WHERE razorpay_order_id = ?",
+                    (razorpay_payment_id, razorpay_order_id)
+                )
+                conn.commit()
+                conn.close()
+                return JSONResponse({"status": "success", "message": "Order payment status updated to paid"})
+        return JSONResponse({"status": "ignored", "event": event})
+    except Exception as err:
+        return JSONResponse({"error": str(err)}, status_code=500)
 
 routes = [
     Route("/api/buyer", buyer, methods=["POST"]),
+    Route("/api/razorpay/webhook", razorpay_webhook, methods=["POST"]),
     Route("/health", health, methods=["GET"])
 ]
 

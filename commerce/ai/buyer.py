@@ -390,9 +390,13 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
                 # FULLY AUTONOMOUS PAYMENT: Immediately authorize payment in background
                 record("autonomous_payment", f"Executing autonomous test payment authorization for Order #{order_id}...", order_id=order_id)
                 try:
-                    if result.get("razorpay_payment_link"):
-                        sim_res = simulate_fake_card_payment(result.get("razorpay_payment_link"))
-                        record("fake_card_simulation", f"Domestic Indian card checkout simulation completed on link: {result.get('razorpay_payment_link')} (Card: Domestic Indian Visa 4000 **** **** 0002)")
+                    sim_res = simulate_fake_card_payment(
+                        payment_link_url=result.get("razorpay_payment_link"),
+                        razorpay_order_id=result.get("razorpay_order_id"),
+                        order_id=order_id,
+                        amount=float(result.get("total", total))
+                    )
+                    record("fake_card_simulation", f"Domestic Indian card payment authorization event dispatched for Razorpay Order: {result.get('razorpay_order_id')} (Card: Domestic Indian Visa 4000 **** **** 0002)")
 
                     pay_res = await call_with_retries(tools, "process_payment", {
                         "order_id": order_id,

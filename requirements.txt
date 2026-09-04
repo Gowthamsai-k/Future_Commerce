@@ -7,4 +7,3 @@ langchain-mcp-adapters
 langchain-groq
 langchain-ollama
 langchain-openai
-razorpay

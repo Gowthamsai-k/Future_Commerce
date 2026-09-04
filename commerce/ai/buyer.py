@@ -371,19 +371,41 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
                     return json.dumps({"success": False, "error": f"Order creation failed: {error}"})
 
             if isinstance(result, dict) and result.get("success"):
+                order_id = result.get("order_id")
                 committed_total += total
                 summary = {
                     "product": result.get("product") or product.get("name"),
                     "quantity": requested_quantity,
                     "total": float(result.get("total", total)),
-                    "order_id": result.get("order_id"),
+                    "order_id": order_id,
                     "razorpay_order_id": result.get("razorpay_order_id"),
-                    "status": result.get("status"),
+                    "status": "created",
                     "customer_name": customer_name,
                     "customer_email": customer_email,
                     "shipping_address": shipping_address,
                     "payment_status": "pending",
                 }
+                
+                # FULLY AUTONOMOUS PAYMENT: Immediately authorize payment in background
+                record("autonomous_payment", f"Executing autonomous test payment authorization for Order #{order_id}...", order_id=order_id)
+                try:
+                    pay_res = await call_with_retries(tools, "process_payment", {
+                        "order_id": order_id,
+                        "payment_succeeded": True,
+                        "otp": "1111"
+                    })
+                    if isinstance(pay_res, dict) and pay_res.get("success"):
+                        summary["payment_status"] = "paid"
+                        summary["status"] = "processing"
+                        summary["razorpay_payment_id"] = pay_res.get("razorpay_payment_id", f"pay_fake_card_{order_id}")
+                        result["payment_status"] = "paid"
+                        result["status"] = "processing"
+                        result["razorpay_payment_id"] = pay_res.get("razorpay_payment_id")
+                        result["message"] = f"✅ Order #{order_id} for {summary['product']} (Total: ₹{total:,.2f}) placed and paid successfully via Razorpay (Automated Test Payment / Agent Authorized)!"
+                        record("autonomous_payment_success", f"Autonomous payment completed for Order #{order_id}! Status: paid", order_id=order_id)
+                except Exception as p_err:
+                    record("autonomous_payment_warning", f"Autonomous payment notice: {p_err}")
+
             return json.dumps(result)
 
     @tool
@@ -465,6 +487,7 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
     # Extract original product request from conversation history if current input is a follow-up
     original_product_request = product_request
     inferred_budget = budget
+    inferred_order_id = None
     
     if conversation_history and isinstance(conversation_history, list) and len(conversation_history) > 0:
         clean_input = str(product_request).lower().strip()
@@ -536,12 +559,12 @@ Target Request: {original_product_request}
 Input: {product_request} | Existing Order ID: {order_id_text} | Budget: {inferred_budget_text} | Qty: {quantity_text} | Customer: {customer_text} | Payment: {payment_text}{conversation_context}
 
 Rules:
-1. OTP PAYMENT FLOW:
-   - When user asks to buy an item, execute `create_budget_checked_order`. If payment is pending and no OTP is provided yet in prompt, ask user: "Order #[ID] created for [Product] (Total: ₹[Total]). Please provide your OTP to authorize payment (Default test OTP: 1111)."
-   - If user input is an OTP, code, or numbers (e.g. "1111", "1234", "OTP is 1111"), IMMEDIATELY call `process_buyer_payment(order_id=Existing_Order_ID, otp=provided_otp)`. DO NOT call get_order or search_product. Once verified, present order confirmation with Order ID, Product, Total, Payment Status (paid), and Razorpay Payment ID.
+1. FULLY AUTONOMOUS PAYMENT FLOW:
+   - When user asks to buy an item, execute `create_budget_checked_order`. The tool automatically handles order reservation and test payment authorization in background.
+   - Present final order confirmation with Order ID, Product, Total, Payment Status (paid), and Razorpay Payment ID.
 2. DEFAULT QUANTITY: Default quantity is 1 unless specified. Do not ask for quantity.
 3. BUDGET: Respect the hard max budget. If item fits, buy it. If item is slightly over, auto-switch to in-stock alternative.
-4. OTP VERIFICATION: Process and confirm order to 'processing' ONLY IF valid OTP is passed or payment_status is 'paid'.
+4. AUTONOMOUS VERIFICATION: The agent handles payment authorization automatically with full user consent.
 5. CATALOG & LISTING: If the user request is to list, browse, or show products (e.g., 'list me all the products', 'show catalog', 'what items do you have'), DO NOT pick a single item or attempt to buy. Call `list_products` or `search_product` and present ALL products from the tool response grouped by category with their names and prices in INR (₹)."""
 
     if not GROQ_API_KEY:

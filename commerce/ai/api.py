@@ -98,6 +98,9 @@ async def razorpay_webhook(request: Request):
     except Exception as err:
         return JSONResponse({"error": str(err)}, status_code=500)
 
+async def health(request: Request):
+    return JSONResponse({"status": "ok", "service": "ai-buyer"})
+
 routes = [
     Route("/api/buyer", buyer, methods=["POST"]),
     Route("/api/razorpay/webhook", razorpay_webhook, methods=["POST"]),

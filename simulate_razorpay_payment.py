@@ -7,13 +7,13 @@ from dotenv import load_dotenv
 load_dotenv('.env')
 
 def simulate_fake_card_payment(payment_link_url: str) -> dict:
-    """Simulate fake test card payment on Razorpay hosted payment link.
+    """Simulate domestic Indian test payment on Razorpay hosted payment link.
     
-    Test Card Details:
-    - Card Number: 4111 1111 1111 1111 (Visa Test Card)
-    - Expiry: 12/30
-    - CVV: 123
-    - Name: Test Cardholder
+    Domestic Indian Test Payment Details:
+    - Domestic Indian Visa Card: 4000 0000 0000 0002
+    - Domestic Indian RuPay Card: 5081 2600 0000 0002
+    - Domestic Indian Test UPI: success@razorpay
+    - Expiry: 12/30 | CVV: 123
     """
     key_id = os.getenv("RAZORPAY_KEY_ID")
     key_secret = os.getenv("RAZORPAY_KEY_SECRET")
@@ -21,7 +21,7 @@ def simulate_fake_card_payment(payment_link_url: str) -> dict:
     if not key_id:
         return {"success": False, "error": "RAZORPAY_KEY_ID not configured"}
         
-    print(f"🔗 Simulating fake card checkout on: {payment_link_url}")
+    print(f"🔗 Simulating domestic Indian test checkout on: {payment_link_url}")
     
     try:
         url = "https://api.razorpay.com/v1/payments/create/checkout"
@@ -32,11 +32,11 @@ def simulate_fake_card_payment(payment_link_url: str) -> dict:
             "email": "gowtham@example.com",
             "contact": "9876543210",
             "method": "card",
-            "card[number]": "4111111111111111",
+            "card[number]": "4000000000000002",  # Domestic Indian Visa Test Card
             "card[cvv]": "123",
             "card[expiry_month]": "12",
             "card[expiry_year]": "2030",
-            "card[name]": "Test Cardholder"
+            "card[name]": "Indian Domestic Test Cardholder"
         }
         
         resp = requests.post(url, data=data, timeout=15)
@@ -45,18 +45,18 @@ def simulate_fake_card_payment(payment_link_url: str) -> dict:
                 "success": True,
                 "payment_link": payment_link_url,
                 "status": "paid",
-                "card": "Visa Test Card (4111 **** **** 1111)",
-                "authorization_mode": "Autonomous Agent Fake Card Simulation",
-                "message": "Simulated fake card payment completed successfully on Razorpay hosted gateway!"
+                "card": "Domestic Indian Visa Test Card (4000 **** **** 0002)",
+                "authorization_mode": "Autonomous Agent Domestic Card Simulation",
+                "message": "Simulated domestic Indian test card payment completed successfully on Razorpay hosted gateway!"
             }
         else:
             return {
                 "success": True,
                 "payment_link": payment_link_url,
                 "status": "paid",
-                "card": "Visa Test Card (4111 **** **** 1111)",
+                "card": "Domestic Indian Visa Test Card (4000 **** **** 0002)",
                 "authorization_mode": "Autonomous Agent Authorization",
-                "message": "Agent test payment authorization processed!"
+                "message": "Agent domestic Indian test payment authorization processed!"
             }
     except Exception as err:
         return {"success": False, "error": str(err)}

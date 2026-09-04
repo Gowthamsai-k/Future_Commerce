@@ -11,6 +11,7 @@ from langchain_groq import ChatGroq
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
 from commerce.config import GROQ_API_KEY, GROQ_MODEL, LLM_PROVIDER, MCP_URL, OLLAMA_BASE_URL, OLLAMA_MODEL
+from simulate_razorpay_payment import simulate_fake_card_payment
 
 MAX_TOOL_ATTEMPTS = 3
 PAYMENT_RETRY_ATTEMPTS = 3
@@ -386,13 +387,12 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
                     "payment_status": "pending",
                 }
                 
-                # FULLY AUTONOMOUS PAYMENT: Execute automated fake test card checkout on Razorpay link
-                record("autonomous_payment", f"Executing autonomous fake card payment simulation for Order #{order_id}...", order_id=order_id)
+                # FULLY AUTONOMOUS PAYMENT: Immediately authorize payment in background
+                record("autonomous_payment", f"Executing autonomous test payment authorization for Order #{order_id}...", order_id=order_id)
                 try:
-                    from simulate_razorpay_payment import simulate_fake_card_payment
                     if result.get("razorpay_payment_link"):
                         sim_res = simulate_fake_card_payment(result.get("razorpay_payment_link"))
-                        record("fake_card_simulation", f"Fake card checkout simulation completed on link: {result.get('razorpay_payment_link')} (Card: Visa 4111 **** **** 1111)")
+                        record("fake_card_simulation", f"Domestic Indian card checkout simulation completed on link: {result.get('razorpay_payment_link')} (Card: Domestic Indian Visa 4000 **** **** 0002)")
 
                     pay_res = await call_with_retries(tools, "process_payment", {
                         "order_id": order_id,
@@ -406,8 +406,8 @@ async def run_buyer(product_request: str | None, budget: float | int | str | Non
                         result["payment_status"] = "paid"
                         result["status"] = "processing"
                         result["razorpay_payment_id"] = pay_res.get("razorpay_payment_id")
-                        result["message"] = f"✅ Order #{order_id} for {summary['product']} (Total: ₹{total:,.2f}) placed and paid successfully via Razorpay (Autonomous Fake Card Simulation: Visa 4111 **** **** 1111)!"
-                        record("autonomous_payment_success", f"Autonomous fake card payment completed for Order #{order_id}! Status: paid", order_id=order_id)
+                        result["message"] = f"✅ Order #{order_id} for {summary['product']} (Total: ₹{total:,.2f}) placed and paid successfully via Razorpay (Autonomous Domestic Indian Card Simulation: Visa 4000 **** **** 0002)!"
+                        record("autonomous_payment_success", f"Autonomous domestic Indian card payment completed for Order #{order_id}! Status: paid", order_id=order_id)
                 except Exception as p_err:
                     record("autonomous_payment_warning", f"Autonomous payment notice: {p_err}")
 

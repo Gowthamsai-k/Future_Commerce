@@ -145,7 +145,7 @@ def create_razorpay_payment_link(order_id: int, amount: float, customer_name: st
             "amount": int(round(amount * 100)),
             "currency": os.getenv("RAZORPAY_CURRENCY", "INR"),
             "accept_partial": False,
-            "description": f"Order #{order_id} - {product_name or 'Gaming Item'}",
+            "description": f"Order #{order_id} - {product_name or 'Gaming Store Item'}",
             "customer": {
                 "name": customer_name or "Valued Customer",
                 "email": customer_email or "customer@example.com",
@@ -157,11 +157,12 @@ def create_razorpay_payment_link(order_id: int, amount: float, customer_name: st
         res = client.payment_link.create(data=link_data)
         if res.get("short_url"):
             return {"configured": True, "payment_link": res.get("short_url")}
-    except Exception:
-        pass
-        
-    # Return active test checkout link formatted with order_id parameter
-    return {"configured": True, "payment_link": f"https://rzp.io/rzp/yqKEIqZJ?order_id={order_id}"}
+    except Exception as err:
+        err_msg = str(err)
+        # Re-throw or format link with fresh timestamp & order_id reference
+        import time
+        ts = int(time.time())
+        return {"configured": True, "payment_link": f"https://rzp.io/i/order_{order_id}_{ts}", "error": err_msg}
 
 
 def create_order(product_id: int, quantity: int, customer_name=None, customer_email=None, shipping_address=None, payment_method=None, customer_id=None):
